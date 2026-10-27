@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
 
 :root {
     --background: #faf9f6;
     --surface: #ffffff;
+    --surface-soft: #f2f0e9;
     --text: #22231f;
     --muted: #657079;
     --green: #4c765f;
@@ -10,6 +11,7 @@
     --green-soft: #dcebe1;
     --border: #e7e4dd;
     --lavender: #eee8fa;
+    --shadow: 0 20px 60px rgba(42, 55, 43, 0.1);
 }
 
 * {
@@ -28,10 +30,21 @@ body {
     font-family: "DM Sans", "Segoe UI", sans-serif;
 }
 
+svg {
+    width: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
 .container {
     width: min(1276px, calc(100% - 48px));
     margin: 0 auto;
 }
+
+/* ---------- Header ---------- */
 
 .site-header {
     border-bottom: 1px solid var(--border);
@@ -121,6 +134,8 @@ body {
     stroke-linejoin: round;
     stroke-width: 1.7;
 }
+
+/* ---------- Hero ---------- */
 
 .hero {
     min-height: 655px;
@@ -341,6 +356,135 @@ h1 em {
     font-weight: 700;
 }
 
+/* ---------- Tips section ---------- */
+
+.section {
+    padding-block: 100px;
+}
+
+.tips-section {
+    background: var(--surface-soft);
+}
+
+.tips-section .container {
+    width: min(1160px, calc(100% - 40px));
+}
+
+.section-heading {
+    margin-bottom: 38px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.kicker {
+    margin: 0 0 10px;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+h2,
+h3 {
+    font-family: "Manrope", sans-serif;
+}
+
+h2 {
+    margin: 0;
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.15;
+}
+
+.centered > p:last-child {
+    margin: 14px 0 0;
+    color: var(--muted);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.info-card {
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface);
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.card-icon {
+    display: grid;
+    width: 45px;
+    height: 45px;
+    place-items: center;
+    margin-bottom: 25px;
+    border-radius: 13px;
+}
+
+.card-icon.purple {
+    background: #ece6f7;
+    color: #776596;
+}
+
+.card-icon.green {
+    background: #dcecdf;
+    color: #50755a;
+}
+
+.card-icon.yellow {
+    background: #f5eccb;
+    color: #8b762f;
+}
+
+.card-icon.peach {
+    background: #f5dfd2;
+    color: #9a624d;
+}
+
+.card-icon.blue {
+    background: #dce9f0;
+    color: #4e7488;
+}
+
+.card-icon.rose {
+    background: #f3dfe3;
+    color: #95626d;
+}
+
+.info-card > small {
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.info-card h3 {
+    margin: 9px 0 11px;
+    font-size: 18px;
+}
+
+.info-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* ---------- Responsive ---------- */
+
 @media (max-width: 900px) {
     .nav-links {
         gap: 15px;
@@ -356,6 +500,10 @@ h1 em {
         max-width: 600px;
         width: 100%;
         margin: 0 auto;
+    }
+
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -416,9 +564,35 @@ h1 em {
     }
 }
 
+@media (max-width: 600px) {
+    .section {
+        padding-block: 76px;
+    }
+
+    .tips-section .container {
+        width: min(100% - 28px, 1160px);
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ---------- Dark mode ---------- */
+
 body.dark-mode {
     --background: #18201b;
     --surface: #222d25;
+    --surface-soft: #1d2620;
     --text: #f3f5ef;
     --muted: #bbc6bd;
     --border: #344238;
