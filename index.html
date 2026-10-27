@@ -1,14 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudentBuddy</title>
+    <meta name="description" content="StudentBuddy helpt je met meer overzicht en minder stress.">
+    <title>StudentBuddy | Meer overzicht. Minder stress.</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Hoofdnavigatie">
+            <a class="brand" href="#" aria-label="StudentBuddy home">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" role="img">
+                        <path d="M22.8 5.2c-7.7 1.1-12.5 5.2-12.5 10.1 0 3.2 2.2 5.1 5.4 5.1 4.6 0 7.7-3.5 8.3-9.1" />
+                        <path d="M9.6 26.4c1.9-5.3 5.1-8.3 10.5-10.4" />
+                    </svg>
+                </span>
+                <span>Student <strong>Buddy</strong></span>
+            </a>
 
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#taken">Taken</a>
+                <a href="#studietips">Studietips</a>
+                <a href="#ontspanning">Ontspanning</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <button class="theme-toggle" type="button" aria-label="Donkere modus inschakelen" aria-pressed="false">
+                <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.2 15.1A8.2 8.2 0 0 1 8.9 3.8 8.2 8.2 0 1 0 20.2 15.1Z" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow"><span></span>JOUW RUSTIGE PLEK OM VOORUIT TE KOMEN</p>
+                <h1>Meer overzicht.<br><em>Minder stress.</em></h1>
+                <p class="hero-description">
+                    Plan je studie, ontdek slimme leertips en neem op tijd een
+                    moment voor jezelf. Meteen toegankelijk, zonder account.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#taken">Plan je dag <span aria-hidden="true">→</span></a>
+                    <a class="button button-secondary" href="#studietips">Bekijk studietips</a>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Voorbeeld van StudentBuddy hulpmiddelen">
+                <div class="soft-circle"></div>
+                <article class="quote-card">
+                    <span class="quote-mark" aria-hidden="true">“</span>
+                    <p>Je hoeft niet perfect te<br> zijn om vooruitgang te<br> boeken.</p>
+                    <small>— StudentBuddy</small>
+                </article>
+                <article class="focus-card">
+                    <span class="focus-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l2.5 1.5"></path></svg>
+                    </span>
+                    <div><strong>Focusmoment</strong><small>25 minuten</small></div>
+                </article>
+                <article class="progress-card">
+                    <span class="progress-ring"><span>0%</span></span>
+                    <div><strong>Lekker bezig</strong><small>0 van 0 taken afgerond</small></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
