@@ -1,42 +1,206 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StudentBuddy</title>
-    <link rel="stylesheet" href="css/indexStyle.css" />
+    <meta
+      name="description"
+      content="StudentBuddy helpt je met meer overzicht en minder stress."
+    />
+    <title>StudentBuddy | Meer overzicht. Minder stress.</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <header>
-      <div>
-        <img src="images/logo.png" alt="Logo" class="logo" />
-        <h1 class="titel">Student Buddy</h1>
-      </div>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Hoofdnavigatie">
+        <a class="brand" href="#" aria-label="StudentBuddy home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" role="img">
+              <path
+                d="M22.8 5.2c-7.7 1.1-12.5 5.2-12.5 10.1 0 3.2 2.2 5.1 5.4 5.1 4.6 0 7.7-3.5 8.3-9.1"
+              />
+              <path d="M9.6 26.4c1.9-5.3 5.1-8.3 10.5-10.4" />
+            </svg>
+          </span>
+          <span>Student <strong>Buddy</strong></span>
+        </a>
 
-      <nav class="navigatiebalk">
-        <ul>
-          <li class="home">
-            <a href="index.html">Home</a>
-          </li>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#taken">Taken</a>
+          <a href="#studietips">Studietips</a>
+          <a href="#ontspanning">Ontspanning</a>
+          <a href="#contact">Contact</a>
+        </div>
 
-          <li class="taken">
-            <a href="about.html">Taken</a>
-          </li>
-
-          <li class="studietips">
-            <a href="studietips.html">Studietips</a>
-          </li>
-
-          <li class="ontspanning">
-            <a href="ontspanning.html">Ontspanning</a>
-          </li>
-
-          <li class="contact">
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Donkere modus inschakelen"
+          aria-pressed="false"
+        >
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M20.2 15.1A8.2 8.2 0 0 1 8.9 3.8 8.2 8.2 0 1 0 20.2 15.1Z"
+            />
+          </svg>
+        </button>
       </nav>
     </header>
+
+    <main>
+      <section class="hero container" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span></span>JOUW RUSTIGE PLEK OM VOORUIT TE KOMEN
+          </p>
+          <h1>Meer overzicht.<br /><em>Minder stress.</em></h1>
+          <p class="hero-description">
+            Plan je studie, ontdek slimme leertips en neem op tijd een moment
+            voor jezelf. Meteen toegankelijk, zonder account.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#taken"
+              >Plan je dag <span aria-hidden="true">→</span></a
+            >
+            <a class="button button-secondary" href="#studietips"
+              >Bekijk studietips</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="hero-visual"
+          aria-label="Voorbeeld van StudentBuddy hulpmiddelen"
+        >
+          <div class="soft-circle"></div>
+          <article class="quote-card">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>
+              Je hoeft niet perfect te<br />
+              zijn om vooruitgang te<br />
+              boeken.
+            </p>
+            <small>— StudentBuddy</small>
+          </article>
+          <article class="focus-card">
+            <span class="focus-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8"></circle>
+                <path d="M12 8v4l2.5 1.5"></path>
+              </svg>
+            </span>
+            <div><strong>Focusmoment</strong><small>25 minuten</small></div>
+          </article>
+          <article class="progress-card">
+            <span class="progress-ring"><span>0%</span></span>
+            <div>
+              <strong>Lekker bezig</strong><small>0 van 0 taken afgerond</small>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section tips-section" id="studietips">
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="kicker">Slimmer studeren</p>
+            <h2>Kleine tips, groot verschil</h2>
+            <p>Praktische gewoontes die je vandaag al kunt proberen.</p>
+          </div>
+          <div class="tips-grid">
+            <article class="info-card">
+              <span class="card-icon purple">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" />
+                </svg>
+              </span>
+              <small>Plannen</small>
+              <h3>Werk met haalbare blokken</h3>
+              <p>
+                Plan taken in blokken van 25 tot 50 minuten. Zo blijft je
+                planning realistisch en houd je aandacht.
+              </p>
+            </article>
+            <article class="info-card">
+              <span class="card-icon green">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M9.5 4.5A2.5 2.5 0 0 0 7 2a2.5 2.5 0 0 0-2.4 3.2A3 3 0 0 0 3 10.5a3 3 0 0 0 1.4 5.1A2.6 2.6 0 0 0 7 19a2.5 2.5 0 0 0 2.5-2.5V4.5ZM14.5 4.5A2.5 2.5 0 0 1 17 2a2.5 2.5 0 0 1 2.4 3.2 3 3 0 0 1 1.6 5.3 3 3 0 0 1-1.4 5.1A2.6 2.6 0 0 1 17 19a2.5 2.5 0 0 1-2.5-2.5V4.5Z"
+                  />
+                </svg>
+              </span>
+              <small>Focus</small>
+              <h3>Leg afleiding buiten bereik</h3>
+              <p>
+                Zet meldingen uit en leg je telefoon uit het zicht. Eén taak
+                tegelijk kost minder energie.
+              </p>
+            </article>
+            <article class="info-card">
+              <span class="card-icon yellow">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"
+                  />
+                </svg>
+              </span>
+              <small>Leren</small>
+              <h3>Test jezelf actief</h3>
+              <p>
+                Lees niet alleen terug. Maak vragen of leg de stof hardop uit
+                alsof je zelf lesgeeft.
+              </p>
+            </article>
+            <article class="info-card">
+              <span class="card-icon peach">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 18 2 18 2c1 7-1.5 12-7 13M2 21c0-3 2-5 6-6"
+                  />
+                </svg>
+              </span>
+              <small>Balans</small>
+              <h3>Neem pauzes vóór je moe bent</h3>
+              <p>
+                Sta regelmatig op, drink water en kijk even naar buiten. Je
+                brein verwerkt dan wat je hebt geleerd.
+              </p>
+            </article>
+            <article class="info-card">
+              <span class="card-icon blue">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m5 12 4 4L19 6" />
+                </svg>
+              </span>
+              <small>Overzicht</small>
+              <h3>Kies je top drie</h3>
+              <p>
+                Bepaal elke ochtend je drie belangrijkste taken. Alles wat
+                daarna lukt is mooi meegenomen.
+              </p>
+            </article>
+            <article class="info-card">
+              <span class="card-icon rose">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2M12 20v2M2 12h2M20 12h2" />
+                </svg>
+              </span>
+              <small>Motivatie</small>
+              <h3>Vier kleine successen</h3>
+              <p>
+                Sta bewust stil bij wat af is. Dat geeft motivatie om aan je
+                volgende taak te beginnen.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
